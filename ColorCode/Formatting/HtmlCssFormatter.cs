@@ -46,12 +46,12 @@ namespace ColorCode.Formatting
 			WriteHeaderDivEnd(textWriter);
 		}
 
-		public void WriteHeader(IStyleSheet styleSheet,
+		public void WriteHeader(IStyleSheet styleSheet, ILanguage language,
 								TextWriter textWriter) {
 			Guard.ArgNotNull(styleSheet, "styleSheet");
 			Guard.ArgNotNull(textWriter, "textWriter");
 
-			WriteHeaderDivStart(styleSheet, textWriter);
+			WriteHeaderDivStart(styleSheet, language.Id, textWriter);
 			WriteHeaderPreStart(textWriter);
 			textWriter.WriteLine();
 		}
@@ -93,9 +93,9 @@ namespace ColorCode.Formatting
 			WriteElementStart("pre", writer);
 		}
 
-		private static void WriteHeaderDivStart(IStyleSheet styleSheet,
+		private static void WriteHeaderDivStart(IStyleSheet styleSheet, string languageClass,
 												TextWriter writer) {
-			WriteElementStart("div", "PlainText", writer);
+			WriteElementStart("div", languageClass, writer);
 		}
 
 		private static void WriteElementStart(string elementName,

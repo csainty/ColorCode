@@ -85,7 +85,7 @@ namespace ColorCode
             Guard.ArgNotNull(styleSheet, "styleSheet");
             Guard.ArgNotNull(textWriter, "textWriter");
 
-            formatter.WriteHeader(styleSheet, textWriter);
+            formatter.WriteHeader(styleSheet, language, textWriter);
 
             languageParser.Parse(sourceCode, language, (parsedSourceCode, captures) => formatter.Write(parsedSourceCode, captures, styleSheet, textWriter));
 

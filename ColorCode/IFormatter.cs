@@ -37,6 +37,7 @@ namespace ColorCode
         /// <param name="styleSheet">The style sheet according to which the header will be generated.</param>
         /// <param name="textWriter">The text writer to which header will be written.</param>
         void WriteHeader(IStyleSheet styleSheet,
+						 ILanguage language,
                          TextWriter textWriter);
     }
 }

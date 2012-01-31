@@ -50,7 +50,7 @@ namespace ColorCode.Formatting
             WriteHeaderDivEnd(textWriter);
         }
 
-        public void WriteHeader(IStyleSheet styleSheet,
+        public void WriteHeader(IStyleSheet styleSheet, ILanguage language,
                                 TextWriter textWriter)
         {
             Guard.ArgNotNull(styleSheet, "styleSheet");

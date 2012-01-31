@@ -7,9 +7,9 @@ namespace ColorCode.Common
         public const string Asax = "asax";
         public const string Ashx = "ashx";
         public const string Aspx = "aspx";
-        public const string AspxCs = "aspx(c#)";
-        public const string AspxVb = "aspx(vb.net)";
-        public const string CSharp = "c#";
+        public const string AspxCs = "aspx-csharp";
+        public const string AspxVb = "aspx-vbnet";
+        public const string CSharp = "csharp";
         public const string Cpp = "cpp";
         public const string Css = "css";
         public const string Html = "html";
@@ -18,7 +18,7 @@ namespace ColorCode.Common
         public const string Php = "php";
         public const string PowerShell = "powershell";
         public const string Sql = "sql";
-        public const string VbDotNet = "vb.net";
+        public const string VbDotNet = "vbnet";
         public const string Xml = "xml";
     }
 }

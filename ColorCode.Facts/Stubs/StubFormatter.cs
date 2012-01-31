@@ -27,7 +27,7 @@ namespace ColorCode.Stubs
             WriteFooter__styleSheet = styleSheet;
         }
 
-        public void WriteHeader(IStyleSheet styleSheet,
+        public void WriteHeader(IStyleSheet styleSheet, ILanguage language,
                                 TextWriter textWriter)
         {
             writeHeader__textWriter = textWriter;

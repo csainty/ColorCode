@@ -21,7 +21,7 @@ namespace ColorCode.Formatting
                 StubStyleSheet stubStyleSheet = new StubStyleSheet { Name__getValue = "fnord", Styles__getValue = new StyleDictionary { new Style(ScopeName.PlainText) { Background = Color.White, Foreground = Color.Black } } };
                 StubTextWriter stubTextWriter = new StubTextWriter();
 
-                formatter.WriteHeader(stubStyleSheet, stubTextWriter);
+                formatter.WriteHeader(stubStyleSheet, Languages.Html, stubTextWriter);
 
                 Assert.Equal("<div style=\"color:Black;background-color:White;\"><pre>", stubTextWriter.Write__buffer);
             }
@@ -33,7 +33,7 @@ namespace ColorCode.Formatting
                 StubStyleSheet stubStyleSheet = new StubStyleSheet { Name__getValue = "fnord", Styles__getValue = new StyleDictionary() };
                 StubTextWriter stubTextWriter = new StubTextWriter();
 
-                formatter.WriteHeader(stubStyleSheet, stubTextWriter);
+				formatter.WriteHeader(stubStyleSheet, Languages.Html, stubTextWriter);
 
                 Assert.Equal("<div><pre>", stubTextWriter.Write__buffer);
             }
@@ -45,7 +45,7 @@ namespace ColorCode.Formatting
                 StubStyleSheet stubStyleSheet = new StubStyleSheet { Name__getValue = "fnord", Styles__getValue = new StyleDictionary { new Style(ScopeName.PlainText) { Foreground = Color.Black } } };
                 StubTextWriter stubTextWriter = new StubTextWriter();
 
-                formatter.WriteHeader(stubStyleSheet, stubTextWriter);
+				formatter.WriteHeader(stubStyleSheet, Languages.Html, stubTextWriter);
 
                 Assert.Equal("<div style=\"color:Black;\"><pre>", stubTextWriter.Write__buffer);
             }
@@ -57,7 +57,7 @@ namespace ColorCode.Formatting
                 StubStyleSheet stubStyleSheet = new StubStyleSheet { Name__getValue = "fnord", Styles__getValue = new StyleDictionary { new Style(ScopeName.PlainText) { Background = Color.White } } };
                 StubTextWriter stubTextWriter = new StubTextWriter();
 
-                formatter.WriteHeader(stubStyleSheet, stubTextWriter);
+				formatter.WriteHeader(stubStyleSheet, Languages.Html, stubTextWriter);
 
                 Assert.Equal("<div style=\"background-color:White;\"><pre>", stubTextWriter.Write__buffer);
             }
@@ -67,7 +67,7 @@ namespace ColorCode.Formatting
             {
                 HtmlFormatter formatter = new HtmlFormatter();
 
-                Exception ex = Record.Exception(() => formatter.WriteHeader(null, new StubTextWriter()));
+				Exception ex = Record.Exception(() => formatter.WriteHeader(null, Languages.Html, new StubTextWriter()));
 
                 Assert.IsType<ArgumentNullException>(ex);
                 Assert.Equal("styleSheet", ((ArgumentNullException)ex).ParamName);
@@ -78,7 +78,7 @@ namespace ColorCode.Formatting
             {
                 HtmlFormatter formatter = new HtmlFormatter();
 
-                Exception ex = Record.Exception(() => formatter.WriteHeader(new StubStyleSheet(), null));
+				Exception ex = Record.Exception(() => formatter.WriteHeader(new StubStyleSheet(), Languages.Html, null));
 
                 Assert.IsType<ArgumentNullException>(ex);
                 Assert.Equal("textWriter", ((ArgumentNullException)ex).ParamName);
