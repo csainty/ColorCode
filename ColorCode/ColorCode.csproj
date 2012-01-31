@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ColorCode</RootNamespace>
     <AssemblyName>ColorCode</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -33,6 +33,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\ColorCode\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,7 +62,6 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +102,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Formatters.cs" />
+    <Compile Include="Formatting\HtmlCssFormatter.cs" />
     <Compile Include="Formatting\HtmlFormatter.cs" />
+    <Compile Include="System.Web\Helpers.cs" />
+    <Compile Include="System.Web\HttpEncoder.cs" />
+    <Compile Include="System.Web\HttpUtility.cs" />
     <Compile Include="Parsing\Scope.cs" />
     <Compile Include="IFormatter.cs" />
     <Compile Include="Compilation\ILanguageCompiler.cs" />
