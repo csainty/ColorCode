@@ -29,3 +29,4 @@ _ReSharper*/
 
 3rdParty/xunit
 packages
+BuildResults.xml

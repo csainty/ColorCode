@@ -17,6 +17,6 @@ namespace ColorCode
         /// <remarks>
         /// The default formatter produces HTML with stylesheet references.
         /// </remarks>
-        public static IFormatter Default { get { return new HtmlCssFormatter(); } }
+        public static IFormatter Default { get { return new HtmlClassFormatter(); } }
     }
 }

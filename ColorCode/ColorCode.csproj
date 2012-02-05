@@ -102,7 +102,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Formatters.cs" />
-    <Compile Include="Formatting\HtmlCssFormatter.cs" />
+    <Compile Include="Formatting\HtmlClassFormatter.cs" />
     <Compile Include="Formatting\HtmlFormatter.cs" />
     <Compile Include="System.Web\Helpers.cs" />
     <Compile Include="System.Web\HttpEncoder.cs" />

@@ -89,7 +89,7 @@ namespace ColorCode
 
             languageParser.Parse(sourceCode, language, (parsedSourceCode, captures) => formatter.Write(parsedSourceCode, captures, styleSheet, textWriter));
 
-            formatter.WriteFooter(styleSheet, textWriter);
+            formatter.WriteFooter(styleSheet, language, textWriter);
         }
     }
 }
